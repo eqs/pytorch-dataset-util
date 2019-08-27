@@ -5,4 +5,3 @@ pytorch-dataset-util
    :maxdepth: 4
 
    pytorch_dataset_util
-   setup
