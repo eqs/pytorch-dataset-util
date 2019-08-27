@@ -10,7 +10,14 @@ def read(filename):
     filename = os.path.join(os.path.dirname(__file__), filename)
     text_type = type(u"")
     with io.open(filename, mode="r", encoding='utf-8') as fd:
-        return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
+        return re.sub(text_type(r':[a-z]+:`~?(.*?)`'),
+                      text_type(r'``\1``'), fd.read())
+
+
+def read_requirements(filename):
+    with open(filename, 'r') as f:
+        requirements = list(map(lambda x: x[:-1], f.readlines()))
+    return requirements
 
 
 setup(
@@ -27,7 +34,7 @@ setup(
 
     packages=find_packages(exclude=('tests',)),
 
-    install_requires=[],
+    install_requires=read_requirements("requirements.txt"),
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
