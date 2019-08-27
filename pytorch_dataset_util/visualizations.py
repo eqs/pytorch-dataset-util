@@ -5,6 +5,7 @@ from chainercv.visualizations import vis_bbox as chainer_vis_bbox
 
 def vis_bbox(img, bbox, label=None, score=None, label_names=None, ax=None):
     """A wrapper of chainer function for visualizing bbox inside image.
+
     Args:
         img (~torch.tensor):
             an image which shape :math:`(3, H, W)` and format RGB [0.0, 1.0]
