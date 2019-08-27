@@ -1,4 +1,7 @@
 .ipynb_checkpoints/
+_build/
+
+# -------
 
 *.py[cod]
 
