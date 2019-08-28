@@ -9,6 +9,10 @@ pytorch-dataset-util
    :target: https://travis-ci.com/eqs/pytorch-dataset-util
    :alt: Latest Travis CI build status
 
+.. image:: https://readthedocs.org/projects/pytorch-dataset-util/badge/?version=latest
+   :target: https://pytorch-dataset-util.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
 Dataset classes
 
 Usage
