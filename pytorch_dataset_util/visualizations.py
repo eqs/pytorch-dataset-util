@@ -5,13 +5,13 @@ from chainercv.visualizations import vis_bbox as chainer_vis_bbox
 
 def vis_bbox(img, bbox, label=None, score=None, label_names=None, ax=None):
     """A wrapper of chainer function for visualizing bbox inside image.
+
     Args:
         img (~torch.tensor):
             an image which shape :math:`(3, H, W)` and format RGB [0.0, 1.0]
         bbox (~torch.tensor):
             bounding boxes we want to show.
-            Its shape is :math:`(N, 4)` and format is
-            :math:`(x_\\mathrm{min}, y_\\mathrm{min}, \
+            Its shape is :math:`(N, 4)` and format is :math:`(x_\\mathrm{min}, y_\\mathrm{min}, \
             x_\\mathrm{max}, y_\\mathrm{max})`
         label (~torch.tensor):
             labels of each bbox
