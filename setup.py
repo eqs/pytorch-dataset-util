@@ -38,7 +38,7 @@ setup(
 
     extras_require={
         'docs': ['sphinx >= 2.2.0']
-    }
+    },
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
