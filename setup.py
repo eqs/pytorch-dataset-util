@@ -36,6 +36,10 @@ setup(
 
     install_requires=read_requirements("requirements.txt"),
 
+    extras_require={
+        'docs': ['sphinx >= 2.2.0']
+    }
+
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'License :: OSI Approved :: MIT License',
