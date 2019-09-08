@@ -33,7 +33,7 @@ def _download_file(url, directory='data', force_download=False):
     file_path = os.path.join(directory, file_name)
 
     if not force_download and os.path.exists(file_path):
-        print(f'{file_path} is already exists.')
+        print(f'{file_path} is already exist.')
         return
 
     print(f'Downloading file from "{url}"')

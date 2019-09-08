@@ -12,7 +12,7 @@ from torchvision.transforms import ToTensor
 
 from .utils import _download_file, _extract_zip
 
-__all__ = ['UECFOOD100Dataset']
+__all__ = ['UECFOOD100Dataset', 'UECFOOD256Dataset']
 
 
 class UECFOOD100Dataset(VisionDataset):
@@ -77,8 +77,9 @@ class UECFOOD100Dataset(VisionDataset):
             os.makedirs(self.data_directory)
             print(f'{self.data_directory} is created.')
 
+        zip_filename = os.path.split(self.url)[1]
         _download_file(self.url, self.root)
-        _extract_zip(os.path.join(self.root, 'dataset100.zip'), self.root)
+        _extract_zip(os.path.join(self.root, zip_filename), self.root)
 
     def _check_exists(self):
         return os.path.exists(self.data_directory)
@@ -113,3 +114,15 @@ class UECFOOD100Dataset(VisionDataset):
 
         self.bboxes = pd.concat(bboxes_dfs, axis=0)
         self.images = images_path_unique
+
+
+class UECFOOD256Dataset(UECFOOD100Dataset):
+
+    url = 'http://foodcam.mobi/dataset256.zip'
+
+    def __init__(self, *args, **kwargs):
+        super(UECFOOD256Dataset, self).__init__(*args, **kwargs)
+
+    @property
+    def data_directory(self):
+        return os.path.join(self.root, 'UECFOOD256')
