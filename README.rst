@@ -17,9 +17,10 @@ Usage
 Installation
 ------------
 
-```
-$ pip install git+https://github.com/eqs/pytorch-dataset-util.git
-```
+.. code-block:: 
+
+    $ pip install git+https://github.com/eqs/pytorch-dataset-util.git
+
 
 Requirements
 ^^^^^^^^^^^^
